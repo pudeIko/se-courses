@@ -1,0 +1,7 @@
+[workspace]
+resolver = "3"
+members = [
+  "file_reader",
+  "struct",
+  "file_sizer",
+]
