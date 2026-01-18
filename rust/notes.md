@@ -126,3 +126,32 @@ and/or scope within the same context.
 - **Vectors**: A vector is a growable array-like data structure in Rust that can hold multiple values of the same type. In the context of enums, vectors are useful when you want to store and manipulate collections of related enum instances or variants.
 - **Exhaustive matches**: Exhaustive matching is the practice of handling all possible cases when working with enums, ensuring that every variant has been accounted for in your code. Rust's type system helps enforce exhaustiveness by requiring you to handle each enum variant or use a catch-all pattern (_) if needed.
 - **Non-exhaustive patterns**: When working with enums, non-exhaustive patterns refer to cases where not all possible enum variants are explicitly handled in a match statement or conditional expression. Rust's compiler will warn you about missing arms (unhandled variants) unless you use the catch-all pattern _ or explicitly mark your enum as non-exhaustive using the ... syntax.
+
+### Applying Rust
+
+- **CLI tool**: Command Line Interface tool is a type of software that can be used at the command line of an operating system.
+- **Makefile**: A makefile contains targets to compile your code into executable binaries or libraries. It also includes rules for managing dependencies between files and creating distribution packages.
+- **debugger**: Debugging tools help developers identify issues in their programs by stepping through the code, line by line, while monitoring variable values and other aspects of program execution.
+- **library**: A collection of reusable functions, structures, macros, traits, and types. Libraries are distributed as binary crates or source code packages on crates.io.
+- **Cargo.toml**: The configuration file for Cargo that contains metadata about your project such as its name, version, authors, dependencies, and links to documentation.
+- **buffered reader**: A buffered reader is a type of input stream in Rust which reads data from a source (like stdin) into an internal buffer before providing it to the application for processing. This can improve performance by reducing the number of system calls required for reading small chunks of data.
+- **std::io::Stdin**: The standard input handle, allowing you to read from user input or pipes in Rust programs.
+
+---
+
+- **Modules**: In Rust, modules provide a way of organizing code within a crate by grouping related functions, types, and constants together. They help with code reuse, separation of concerns, and improving the readability of large projects.
+- **Public/Private visibility**: Public items are accessible from outside their defining module, while private ones can only be accessed from within that module. This allows controlling access to parts of your library or application's internals.
+- **pub keyword**: The pub keyword is used in Rust to make an item public and visible outside its defining module. It can be applied before functions, structs, enums, modules, and other items.
+- **Doc tests**: Doc tests are a feature of the Rust documentation system that allows you to include executable examples within your comments. These examples will automatically run when building or testing your project, ensuring they remain up-to-date with any changes in the codebase.
+
+---
+
+- **Testing**: The process of evaluating a program or system by running it under controlled conditions to ensure correctness, robustness, and reliability.
+- **Strongly Typed Language**: A programming language that utilizes static typing, enforcing strict data types during compilation rather than runtime.
+- **Test Attribute**: In Rust, a special attribute (#[test]) used to denote functions as tests in test modules or files.
+- **Integration Tests**: Tests written for external interfaces and behavior of software components working together; often placed in the tests/ directory in Rust projects.
+- **Unit Tests**: Tests focusing on individual units, methods, or functions within a module or library file.
+- **Public vs Private Code**: In Rust, code visibility can be controlled using the pub keyword for public access and without it (private) to restrict usage.
+- **Test Coverage**: The degree of testing performed in a project, often measured as a percentage of lines of code tested or branches covered.
+- **Assertions**: Statements used within tests to verify expected outcomes by comparing actual results with desired values.
+- **Buff Read**: A Rust trait implementing read operations on buffered data streams; useful for reading from files and standard input/output.

@@ -4,4 +4,5 @@ members = [
   "file_reader",
   "struct",
   "file_sizer",
+  "math_utils",
 ]
