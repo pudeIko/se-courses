@@ -43,7 +43,7 @@ pub fn div(a: i64, b: i64) -> Option<i64> {
         print!("\tDivision by zero, returning None\n");
         return None;
     } else {
-        return Some(a / b);
+        return Some(a / b); 
     }
 }
 
@@ -55,7 +55,7 @@ mod tests {
 
     #[test]
     fn test_add() {
-        assert_eq!(add(2, 3), 5);
+        assert_eq!(add(2, 3), 5); 
         assert_eq!(add(-2, 3), 1);
     }
 

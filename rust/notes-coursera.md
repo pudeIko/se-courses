@@ -155,3 +155,56 @@ and/or scope within the same context.
 - **Test Coverage**: The degree of testing performed in a project, often measured as a percentage of lines of code tested or branches covered.
 - **Assertions**: Statements used within tests to verify expected outcomes by comparing actual results with desired values.
 - **Buff Read**: A Rust trait implementing read operations on buffered data streams; useful for reading from files and standard input/output.
+
+### Data Engineering with Rust
+
+### Rust Data Structures: Collections
+
+- **Rayon**: A Rust library providing simple parallelism for performance. Uses
+thread pool model for concurrent code easily.
+
+---
+
+- **Vector** - Growable array, similar to Python list
+- **VecDeque** - Double-ended queue with fast appends/pops on both ends
+- **Linked List** - List with efficient inserts/removals in middle but slower indexing
+- **HashMap** - Key-value store, similar to Python dict
+- **Sequence** - Immutable ordered collection indexed by position, similar to Python tuple
+
+---
+
+- **Graph**: A structure to model connections between data. Used for social networks, recommendations, etc
+- **Centrality**: A graph metric that indicates the importance of a node based on its connections. Useful for finding key players. Higher scores mean more connections.
+- **HashSet**: A Rust collection that only stores unique elements.
+- **Shortest Path Algorithm**: Algorithms like Dijkstra that efficiently find the shortest distance between two nodes in a graph. Useful for GPS navigation.
+- **Community Detection**: Algorithms that identify closely connected groups like friend circles. Useful for social network analysis.
+- **BTreeSet**: A ordered, unique Rust collection.
+- **Binary Heap**: A priority Rust queue useful for ordering elements.
+- **Node**: A record in the graph representing an entity like a person or event.
+- **Relationship**: A connection between nodes like friends or co-workers. Has a direction and type.
+- **Label**: Categories used to group similar nodes like "Person". Help query specific nodes faster.
+
+### Safety, Security, and Concurrency with Rust
+
+- **Ownership** - Resource management concept where variables have a single owner. When owner goes out of scope, resource is dropped.
+- **Borrowing** - Using a reference to a resource owned by another variable instead of taking ownership.
+- **Lifetimes** - Annotate references with how long they live. Ensures validity.
+- **Threads** - Concurrent lightweight tasks.
+- **Mutex** - Mutual exclusion mechanism to coordinate thread safety.
+
+---
+
+- **Threads** - Lightweight units of execution that allow concurrent execution in a program. Can be spawned with the thread::spawn function.
+- **Channels** - Allow message passing between threads. Created with mpsc::channel and allow sending values with send and receiving with recv.
+- **Mutex** - Enforces exclusive access to data across threads. Created with Mutex::new and data accessed through the lock method.
+- **Arc** - Safely shares ownership of data across threads. Wraps types and allows them to be immutably shared between threads.
+- **Rayon** - Parallelization library that launches threads to speed up operations like maps, filters, reductions etc.
+
+---
+
+- **DataFrame**: A tabular data structure containing rows and columns, similar to a spreadsheet or SQL table. Useful for data analysis and manipulation.
+- **EDA (Exploratory Data Analysis)**: The process of exploring and summarizing datasets to understand their characteristics, find patterns, and validate assumptions prior to applying predictive models.
+- **Notebook**: An interactive coding environment that allows writing and executing code, visualizations, and text. Useful for EDA and sharing work.
+- **MLFlow**: An open source platform for managing the machine learning lifecycle, including experimentation, reproducibility, and deployment.
+- **Polars**: A Rust DataFrame library optimized for speed and productivity. Useful for data manipulation at scale. Available in Python and Rust.
+- **Evcxr_jupyter**: A Rust kernel for Jupyter notebooks that allows running Rust code interactively within a notebook environment.
