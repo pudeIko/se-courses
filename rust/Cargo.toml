@@ -5,5 +5,6 @@ members = [
   "struct",
   "file_sizer",
   "math_utils",
-  "guessing_game", 
+  "guessing_game",
+  "minigrep",
 ]
