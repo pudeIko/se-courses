@@ -208,3 +208,73 @@ thread pool model for concurrent code easily.
 - **MLFlow**: An open source platform for managing the machine learning lifecycle, including experimentation, reproducibility, and deployment.
 - **Polars**: A Rust DataFrame library optimized for speed and productivity. Useful for data manipulation at scale. Available in Python and Rust.
 - **Evcxr_jupyter**: A Rust kernel for Jupyter notebooks that allows running Rust code interactively within a notebook environment.
+
+## Rust for DevOps
+
+### Implementing Logging and Monitoring in Rust
+
+- Prometheus - An open-source monitoring and alerting toolkit that collects and stores metrics as time series data, allowing for powerful querying and visualization.
+- Grafana - An open-source platform for data visualization and monitoring that integrates with various data sources, including Prometheus, to create interactive dashboards and alerts.
+- To configure Prometheus and Grafana, you typically need to set up a Prometheus server to scrape metrics from your Rust application, and then connect Grafana to the Prometheus data source to visualize those metrics in dashboards.
+- To impement logging in Rust, you can use the `log` crate for a logging facade and choose a compatible logging implementation like `env_logger` or `fern` to handle the actual logging output. You can configure log levels, formats, and output destinations (e.g., console, file) based on your needs.
+- Other logging libraries include `slog` for structured logging and `tracing` for advanced instrumentation and distributed tracing capabilities.
+
+### Automating System Management
+
+- It's important to add compliance checks to ensure that your automation scripts are running correctly and securely. This can include validating input parameters, checking for required permissions, and ensuring that the environment is properly configured before executing any actions.
+- To automate system management tasks in Rust, you can use libraries like `std::process` for executing system commands, `std::fs` for file operations, and `sysinfo` for retrieving system information.
+- When working with JSON data in Rust, you can use the `serde` crate for serialization and deserialization. This allows you to easily convert Rust data structures to and from JSON format, which is commonly used for configuration files and API communication. It's a good practice to define JSON rules and schemas to ensure that the data being processed adheres to expected formats and structures.
+
+### CI/CD with Rust
+
+- on: workflow_dispatch - This event allows you to manually trigger a workflow from the GitHub Actions interface.
+- SUPER IMPORTANT: Github allows to package and publish containerized applications to GitHub Packages, which can be used as a registry for Docker images. This is useful for CI/CD pipelines where you want to build and deploy containerized applications.
+
+## Python and Rust with Linux Command Line Tools
+
+### Introduction
+
+- clap: A Rust library for parsing command-line arguments and generating help messages. It provides a simple and efficient way to create CLI applications with various options and subcommands.
+
+### Using Rust with Python
+
+- pyo3: A Rust library that allows you to write Python extensions in Rust. It provides a way to create Python modules and classes using Rust code, enabling you to leverage Rust's performance and safety features in your Python applications. It also allows you to call Python code from Rust, making it a powerful tool for integrating Rust and Python in a seamless manner, either by creating Python bindings for Rust libraries or by embedding Python code within Rust applications.
+- criterion - A Rust library for benchmarking code performance. It provides a simple and flexible API for measuring the execution time of Rust functions and comparing different implementations. Criterion allows you to create benchmarks with various configurations, such as warm-up iterations, sample size, and statistical analysis, making it a valuable tool for optimizing Rust code and ensuring that performance improvements are accurately measured.
+- maturin: A tool for building and publishing Rust-based Python packages. It simplifies the process of creating Python extensions in Rust and allows you to easily distribute your Rust code as a Python package on PyPI. Maturin handles the compilation and packaging of Rust code, making it easier to integrate Rust functionality into Python projects.
+
+## Rust AWS Lambda
+
+- **Handler** - The Rust function that gets invoked to handle a Lambda event and context
+- **Payload** - The input data passed to the handler function
+- **Response** - The output data returned from the handler function
+- **Tracing** - Logging debug/trace information using the tracing crate
+- **Serialization** - Converting Rust data structures to and from formats like JSON
+
+---
+
+## Rust for Large Language Model Operations (LLMOps)
+
+### DevOps Concepts for LLMOps
+
+- **Infrastructure as code**: Infrastructure as code is a DevOps principle where infrastructure is provisioned and managed with the same rigor as application code. It enables defining the infrastructure in a declarative way and storing it in source control.
+- **Continuous Integration**: Continuous integration is an essential DevOps practice where developers frequently merge code changes into a shared repository, triggering automated builds and tests. Key benefits are faster feedback, improved quality, and shorter validation/release cycles.
+- **Continuous Delivery**: Continuous delivery expands on continuous integration by deploying code changes to testing and production environments after builds pass automated checks. This lets teams validate across dimensions and release reliably.
+- **Automation and Tooling**: Automation is critical to realizing the benefits of cloud and DevOps. Manual processes are error-prone and limit agility.
+
+### Rust Hugging Face Candle
+
+- Rust Candle is a minimalist machine learning framework from Hugging Face, enabling high-performance model training and inference. Demos cover using Candle with CUDA GPUs, AWS cloud, and invoking large language models like Starcoder.
+- Candle is an easy-to-use yet performant ML framework for Rust, supporting features like model training, GPU acceleration, quantization, and model serving. It has Python-like syntax and includes many state-of-the-art models.
+
+### Key LLMOps Technologies
+
+- Rust Bert enables running state-of-the-art NLP models like BERT in a Rust environment leveraging Torch or ONNX Runtime. It offers task pipelines and interfaces to projects like Hugging Face Transformers.
+- ONNX represents models as graphs of mathematical operators. It covers nodes for predictions, as well as initializers, attributes, metadata, and other functionality. ONNX encourages extensibility via custom ops.
+- ONNX Runtime is a high-performance inference engine for ONNX models, supporting multiple hardware platforms and execution providers. It provides APIs for various languages, including Rust, and optimizes model execution for low latency and high throughput.
+
+### Key Generative AI Technologies
+
+- Google Bard is a conversational AI model developed by Google, designed to generate human-like text responses in a conversational context. It is built on top of Google's language models and is intended for use in chatbots, virtual assistants, and other applications that require natural language understanding and generation.
+- Claude is an AI assistant developed by Anthropic, designed to provide helpful and safe responses in a conversational context. It is built on top of Anthropic's language models and focuses on generating responses that are aligned with human values and ethical considerations.
+- CodeWhisperer is an AI-powered code generation tool developed by Amazon Web Services (AWS). It uses machine learning models to assist developers in writing code by providing suggestions, auto-completions, and generating code snippets based on natural language input. CodeWhisperer is designed to improve developer productivity and help with coding tasks across various programming languages.
+- CodeWhisperer CLI is a command-line interface tool that allows developers to interact with CodeWhisperer directly from the terminal. It provides a convenient way to get for example system information and manage CodeWhisperer from the command line.

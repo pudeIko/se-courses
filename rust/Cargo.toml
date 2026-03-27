@@ -1,5 +1,6 @@
 [workspace]
 resolver = "3"
+
 members = [
   "file_reader",
   "struct",
@@ -7,4 +8,5 @@ members = [
   "math_utils",
   "guessing_game",
   "minigrep",
+  "web_hello",
 ]

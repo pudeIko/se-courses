@@ -1,15 +1,16 @@
-Small and bigger programs written along with the Rust Programming course.
+Rust programs built while following various Rust courses.
 
-The structure is as follows:
+This repository includes:
 
-1. Rust Fundamentals:
+1. Exercises from the Rust Programming course on [Coursera](https://www.coursera.org/specializations/rust-programming):
 
-- file_reader: A simple file reader that reads and displays the contents of a
-file.
-- file_sizer: A program that converts file sizes between bytes, kilobytes,
-megabytes, and gigabytes.
-- struct: A demonstration of defining and using structs in Rust.
-- math_utils: A collection of basic mathematical utility functions. Summary
-project of the first course.
+- file_reader: Reads a file and prints its contents.
+- file_sizer: Converts file sizes between bytes, kilobytes, megabytes, and gigabytes.
+- struct: Demonstrates how to define and use structs in Rust.
+- math_utils: Basic math utility functions. This is the summary project for the first course.
 
-2. Data Engineering with Rust:
+2. Small projects from [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html) book:
+
+- guessing_game: A command-line game where the player guesses a random number.
+- minigrep: A small grep-like tool that prints lines matching a pattern in a file.
+- web_hello: A basic multithreaded web server that serves "Hello World!" and demonstrates networking and concurrency with Rust's standard library.
